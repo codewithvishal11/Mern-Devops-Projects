@@ -1,12 +1,20 @@
-FROM node:18
+# ---- Base Image ----
+FROM node:18-alpine
 
+# ---- App Directory ----
 WORKDIR /app
 
+# ---- Only package files copy (cache use) ----
 COPY package*.json ./
-RUN npm install
 
+# ---- Fast install ----
+RUN npm install --prefer-offline --no-audit
+
+# ---- बाकी code copy ----
 COPY . .
 
+# ---- Port ----
 EXPOSE 5000
 
-CMD ["node", "index.js"]
+# ---- Run ----
+CMD ["node", "server.js"]]
