@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # ---- Run ----
-CMD ["node", "server.js"]]
+CMD ["node", "server.js"]
