@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Optional custom global styles */
+/* @theme {
+  --color-brand: #2563eb;
+} */
+
+.cols li:nth-child(1){
+    font-size: 20px;
+    margin-bottom: 14px;
+    padding-bottom: 0px;
+}
